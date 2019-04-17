@@ -40,7 +40,6 @@ fi
 #######################
 
 BACKUP_TIME=`date +\%Y_\%m_\%d_\%s`
-BACKUP_FILENAME_PREFIX="backup_"
 
 if [ "$BACKUP_GLOBALS_ENABLED" = "yes" ]
 then
@@ -76,4 +75,5 @@ do
     fi
 done
 
+# Delete old backups
 find "$BACKUP_DIR" -maxdepth 1 -mtime +"$DAYS_TO_KEEP" -name "$BACKUP_FILENAME_PREFIX*" -exec rm -f '{}' ';'
