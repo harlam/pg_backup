@@ -19,7 +19,7 @@ done
 
 if [ -z "$CONFIG_FILE_PATH" ] ; then
     SCRIPT_PATH=`cd ${0%/*} && pwd -P`
-    CONFIG_FILE_PATH="$SCRIPT_PATH/default.conf"
+    CONFIG_FILE_PATH="$SCRIPT_PATH/pg_backup.conf"
 fi
 
 if [ ! -r "$CONFIG_FILE_PATH" ] ; then
